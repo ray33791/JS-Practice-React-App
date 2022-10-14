@@ -1,25 +1,26 @@
+import React from 'react' 
 import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
+
+  const [color, setColor] = React.useState('')
+
+  function getRandomColor() {
+    for (var i = 0; i < 6; i++) {
+     setColor(`#${Math.floor(Math.random()*16777215).toString(16)}`);
+   }
+};
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button 
+    style ={{backgroundColor: color, width: '80px', height: '80px', cursor: 'pointer', borderRadius: '100%'}}
+    onClick={getRandomColor}>Nigger</button>
     </div>
-  );
-}
+  )};
+
 
 export default App;
